@@ -1,0 +1,174 @@
+/* فونت و بک‌گراند کلی */
+
+body {
+  background-color: #fff8f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+/* هدر */
+
+.header-container nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff7043;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+.nav-right a,
+.nav-left a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.register-login-btn i {
+  margin-left: 5px;
+}
+
+/* وسط چین کردن کل فرم و گزینه‌ها */
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content form label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px 0px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* عناوین */
+
+.content h2 {
+  color: #ff5722;
+  margin-top: 25px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* لیبل‌ها */
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  direction: rtl; /* برای راست به چپ */
+}
+
+
+/* استایل فیلدها */
+
+/* کادر توضیحات */
+
+textarea {
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 15px;
+  border: 2px solid #ff7043;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  resize: vertical;
+  box-shadow: none;
+}
+
+textarea:focus {
+  border-color: #e64a19;
+  box-shadow: 0 0 10px rgba(255, 112, 67, 0.4);
+  outline: none;
+  animation: pulse 0.4s ease-in-out;
+}
+
+/* دکمه */
+
+button {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #e64a19;
+}
+
+/* مخفی کردن ظاهر پیش‌فرض رادیو و چک‌باکس */
+
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* تغییر رنگ وقتی انتخاب شده */
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  background-color: #ff7043;
+  box-shadow: 0 0 8px #ff7043;
+  animation: pulse 0.3s ease;
+}
+
+/* نقطه داخلی برای رادیو */
+
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* انیمیشن پالس */
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
